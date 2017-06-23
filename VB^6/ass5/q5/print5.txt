@@ -1,0 +1,20 @@
+			Assignment #5
+Q5. Create avb application and add statusbar containing panels to show date time and 
+    current mouse position.
+
+Private Sub Form_Load()
+a = StatusBar1.Panels.Add(2, "date")
+b = StatusBar1.Panels.Add(1, "time")
+c = StatusBar1.Panels.Add(3, "co")
+StatusBar1.Panels(2).Text = DateValue(Now)
+
+End Sub
+
+Private Sub Form_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
+StatusBar1.Panels(3).Text = X & " " & Y
+End Sub
+
+Private Sub Timer1_Timer()
+StatusBar1.Panels(1).Text = TimeValue(Now)
+
+End Sub

@@ -1,0 +1,32 @@
+					Assignment #3
+Q2.	Create a form that changes the background color on each mouse event and display 
+	the events name on the label. The window state should change to maximum on form load.
+
+Private Sub Form_Click()
+Label1.Caption = "Click_Event"
+Form1.BackColor = RGB(0, 150, 0)
+End Sub
+
+Private Sub Form_DblClick()
+Label1.Caption = "Double_Click_Event"
+Form1.BackColor = RGB(150, 0, 0)
+End Sub
+
+Private Sub Form_Load()
+Form1.WindowState = 2
+End Sub
+
+Private Sub Form_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Label1.Caption = "Mouse_Down_Event"
+Form1.BackColor = RGB(0, 0, 150)
+End Sub
+
+Private Sub Form_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Label1.Caption = "Mouse_Move_Event"
+Form1.BackColor = RGB(0, 0, 0)
+End Sub
+
+Private Sub Form_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Label1.Caption = "Mouse_Up_Event"
+Form1.BackColor = RGB(0, 150, 150)
+End Sub

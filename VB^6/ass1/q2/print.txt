@@ -1,0 +1,8 @@
+				Assignment #1
+Q2. 	Create a form with three textboxes for RGB color intensity 
+	and according to which the background color of the form changes.
+
+Private Sub Command1_Click()
+Form1.BackColor = RGB(Text1.Text, Text2.Text, Text3.Text)
+End Sub
+

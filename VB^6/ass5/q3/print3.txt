@@ -1,0 +1,19 @@
+				Assignment #5
+Q3. Create a vb application to show free hand drawing on different mouse events.use 
+    form background as white.
+
+Dim oldx, oldy, a As Integer
+
+Private Sub Form_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)
+oldx = X
+oldy = Y
+a = 1
+End Sub
+
+Private Sub Form_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
+If a = 1 Then
+Form1.Line (oldx, oldy)-(X, Y)
+oldx = X
+oldy = Y
+End If
+End Sub

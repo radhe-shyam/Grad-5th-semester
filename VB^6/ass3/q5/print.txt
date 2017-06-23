@@ -1,0 +1,11 @@
+				Assignment #3
+Q5.	Create a form , add 3 text boxes for P,R,T and option button for selection for 
+	simple or compound interest . On button click calculate the appropriate interest.
+
+Private Sub Command1_Click()
+If Option1.Value = True Then
+Text4.Text = (Val(Text1.Text) * Val(Text2.Text) * Val(Text3.Text)) / 100
+Else
+Text4.Text = Val(Text1.Text) * (1 + (Val(Text2.Text) / 100)) ^ Val(Text3.Text)
+End If
+End Sub

@@ -1,0 +1,23 @@
+		Assignment #2
+Q2.	create a form that can add and delete items in a 
+	list box (input is entered by the user in the textbox). 		
+
+
+Private Sub Command1_Click()
+If Text1.Text = "" Then
+    Exit Sub
+Else
+    For i = 0 To List1.ListCount - 1
+        If List1.List(i) = Text1.Text Then
+        Exit Sub
+        End If
+    Next i
+    List1.AddItem (Text1.Text)
+End If
+End Sub
+
+Private Sub Command2_Click()
+If List1.ListIndex >= 0 Then
+    List1.RemoveItem (List1.ListIndex)
+End If
+End Sub

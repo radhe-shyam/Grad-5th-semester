@@ -1,0 +1,29 @@
+			Assignment #4
+Q5. create a vb application to show functionality of image scrolling using picture box 
+    and scrollbars.
+
+Private Sub Form_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)
+If Button = vbRightButton Then
+PopupMenu formen
+End If
+End Sub
+
+Private Sub gop_Click()
+Form1.BackColor = &HFF00&
+End Sub
+
+Private Sub newop_Click()
+Form2.Show (0)
+End Sub
+
+Private Sub opop_Click()
+Form2.Show (0)
+End Sub
+
+Private Sub rop_Click()
+Form1.BackColor = &HFF&
+End Sub
+
+Private Sub yop_Click()
+Form1.BackColor = &HFFFF&
+End Sub

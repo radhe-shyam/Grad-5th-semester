@@ -1,0 +1,18 @@
+			Assignment #3
+Q4).    Create a form having a textbox control and a command button control. 
+	On pressing command button the application should verify that the 
+	text box is empty or not , if it is not empty check whether it is a 
+	string or number and display appropriate message. Make sure your 
+	form should not be resizable and could not be maximized.
+
+Private Sub Command1_Click()
+If Text1.Text = "" Then
+    t = MsgBox("The string is null", vbOKOnly, "Verfication")
+Else
+    If IsNumeric(Text1.Text) Then
+        t = MsgBox("The string is Numeric", vbOKOnly, "Verfication")
+    Else
+        t = MsgBox("The string is Alphabetic", vbOKOnly, "Verfication")
+    End If
+End If
+End Sub

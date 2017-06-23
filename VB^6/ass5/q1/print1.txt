@@ -1,0 +1,43 @@
+				Assignment #5
+Q1. A shopping store has developed the following data entry screen 
+    for its operations.the store offers three different membership 
+    schemes for its regular users as platinum,gold and silver.platinum 
+    members get a discount of 10%,gold members get discount of 5% and 
+    silver gets discount of 3%.the product name should be in a listbox.
+
+Dim sum As Integer
+Dim b As Integer
+Dim i As Integer
+Private Sub Command1_Click()
+For i = 0 To List1.ListCount - 1
+If List1.Selected(i) = True Then
+List3.AddItem (List1.List(i))
+List2.AddItem (InputBox("enter  quantity" & " " & List1.List(i)))
+End If
+Next i
+For i = 0 To List1.ListCount - 1
+If List1.Selected(i) = True Then
+sum = sum + List1.ItemData(i) * Val(List2.List(b))
+b = b + 1
+End If
+Next i
+Label3.Caption = sum
+For i = 0 To List1.ListCount - 1
+List1.Selected(i) = False
+Next i
+End Sub
+
+Private Sub Command2_Click()
+If Option1.Value = True Then
+Label4.Caption = sum - sum * 5 / 100
+ElseIf Option2.Value = True Then
+Label4.Caption = sum - sum * 10 / 100
+ElseIf Option3.Value = True Then
+Label4.Caption = sum - sum * 20 / 100
+End If
+End Sub
+
+Private Sub Form_Load()
+sum = 0
+b = 0
+End Sub

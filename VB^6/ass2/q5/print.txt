@@ -1,0 +1,27 @@
+			Assignment #2
+Q5.	Create a form with four images as circle, rectangle , square and 
+	triangle. Calculate the area for the selected image. The required 
+	parameter will be entered by the user.
+
+
+Private Sub Picture1_Click()
+r = InputBox("Enter the length of Radius")
+Text1.Text = 3.14 * r * r
+End Sub
+
+Private Sub Picture2_Click()
+h = InputBox("Enter the Height of Rectangle")
+w = InputBox("Enter the Width of Rectangle")
+Text1.Text = h * w
+End Sub
+
+Private Sub Picture3_Click()
+h = InputBox("Enter the Height of Rectangle")
+Text1.Text = h * h
+End Sub
+
+Private Sub Picture4_Click()
+h = InputBox("Enter the Height of Triangle")
+b = InputBox("Enter the Base of Triangle")
+Text1.Text = 0.5 * h * b
+End Sub

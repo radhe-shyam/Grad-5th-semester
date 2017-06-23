@@ -1,0 +1,45 @@
+			Assignment #4
+Q2. Create a vb applicatiuon to perform different matrix operations.
+
+Private Sub Command1_Click()
+For i = 0 To 8
+Text1(i + 18).Text = CInt(Text1(i).Text) + CInt(Text1(i + 9).Text)
+Next i
+End Sub
+
+Private Sub Command2_Click()
+For i = 0 To 8
+Text1(i + 18).Text = CInt(Text1(i).Text) - CInt(Text1(i + 9).Text)
+Next i
+End Sub
+
+Private Sub Command3_Click()
+Dim a(3, 3) As Integer
+Dim b(3, 3) As Integer
+Dim c(3, 3) As Integer
+j = 0
+For i = 0 To 2
+        a(i, 0) = CInt(Text1(j).Text)
+        a(i, 1) = CInt(Text1(j + 1).Text)
+        a(i, 2) = CInt(Text1(j + 2).Text)
+        b(i, 0) = CInt(Text1(j + 9).Text)
+        b(i, 1) = CInt(Text1(j + 10).Text)
+        b(i, 2) = CInt(Text1(j + 11).Text)
+        j = j + 3
+Next i
+For i = 0 To 2
+    For j = 0 To 2
+        For k = 0 To 2
+            c(i, j) = c(i, j) + a(i, k) * b(k, j)
+        Next k
+    Next j
+Next i
+j = 0
+For i = 0 To 2
+    Text1(j + 18).Text = c(i, 0)
+    Text1(j + 19).Text = c(i, 1)
+    Text1(j + 20).Text = c(i, 2)
+    j = j + 3
+Next i
+End Sub
+

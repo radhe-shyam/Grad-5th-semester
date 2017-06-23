@@ -1,0 +1,9 @@
+			Assignment #4
+Q1. Design a vb application that display your name at the location you have clicked.
+
+Private Sub Form_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Label1.Caption = "Radhe"
+Label1.Top = Y
+Label1.Left = X
+End Sub
+

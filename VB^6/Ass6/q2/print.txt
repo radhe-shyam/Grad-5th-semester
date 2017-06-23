@@ -1,0 +1,104 @@
+			Assignment #6
+Q.2  Create s vb application to demonstrate traffic signal system.  
+
+Dim t As Integer
+Private Sub Form_Load()
+Timer1.Enabled = True
+t = 0
+End Sub
+
+Private Sub Timer1_Timer()
+t = t Mod 4
+If t = 0 Then
+    Shape3.FillColor = vbBlack
+    Shape2.FillColor = vbBlack
+    Shape1.FillColor = vbYellow
+
+    Shape4.FillColor = vbRed
+    Shape5.FillColor = vbBlack
+    Shape6.FillColor = vbBlack
+    
+    Shape7.FillColor = vbRed
+    Shape8.FillColor = vbBlack
+    Shape9.FillColor = vbBlack
+    
+    Shape10.FillColor = vbBlack
+    Shape11.FillColor = vbGreen
+    Shape12.FillColor = vbBlack
+ElseIf t = 1 Then
+      
+    Shape3.FillColor = vbBlack
+    Shape2.FillColor = vbGreen
+    Shape1.FillColor = vbBlack
+    
+    Shape4.FillColor = vbBlack
+    Shape5.FillColor = vbBlack
+    Shape6.FillColor = vbYellow
+    
+    Shape7.FillColor = vbRed
+    Shape8.FillColor = vbBlack
+    Shape9.FillColor = vbBlack
+    
+    Shape10.FillColor = vbRed
+    Shape11.FillColor = vbBlack
+    Shape12.FillColor = vbBlack
+ElseIf t = 2 Then
+    Shape3.FillColor = vbRed
+    Shape2.FillColor = vbBlack
+    Shape1.FillColor = vbBlack
+    
+    Shape4.FillColor = vbBlack
+    Shape5.FillColor = vbGreen
+    Shape6.FillColor = vbBlack
+    
+    Shape7.FillColor = vbBlack
+    Shape8.FillColor = vbBlack
+    Shape9.FillColor = vbYellow
+    
+    Shape10.FillColor = vbRed
+    Shape11.FillColor = vbBlack
+    Shape12.FillColor = vbBlack
+ElseIf t = 3 Then
+    Shape3.FillColor = vbRed
+    Shape2.FillColor = vbBlack
+    Shape1.FillColor = vbBlack
+    
+    Shape4.FillColor = vbRed
+    Shape5.FillColor = vbBlack
+    Shape6.FillColor = vbBlack
+    
+    Shape7.FillColor = vbBlack
+    Shape8.FillColor = vbGreen
+    Shape9.FillColor = vbBlack
+    
+    Shape10.FillColor = vbBlack
+    Shape11.FillColor = vbBlack
+    Shape12.FillColor = vbYellow
+End If
+t = t + 1
+If Shape2.FillColor = vbGreen Then
+Timer2.Enabled = True
+ElseIf Shape5.FillColor = vbGreen Then
+Timer3.Enabled = True
+ElseIf Shape8.FillColor = vbGreen Then
+Timer4.Enabled = True
+ElseIf Shape11.FillColor = vbGreen Then
+Timer5.Enabled = True
+End If
+End Sub
+
+Private Sub Timer2_Timer()
+Command2.Left = Command2.Left + 40
+End Sub
+
+Private Sub Timer3_Timer()
+Command4.Top = Command4.Top + 30
+End Sub
+
+Private Sub Timer4_Timer()
+Command1.Left = Command1.Left - 30
+End Sub
+
+Private Sub Timer5_Timer()
+Command3.Top = Command3.Top - 30
+End Sub

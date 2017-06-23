@@ -1,0 +1,11 @@
+			Assignment #2
+Q3.	Create a form with two list boxes and one button to 
+	move list items from one list box to other. 
+
+
+Private Sub Command1_Click()
+If List1.ListIndex >= 0 Then
+    List2.AddItem (List1.List(List1.ListIndex))
+    List1.RemoveItem (List1.ListIndex)
+End If
+End Sub

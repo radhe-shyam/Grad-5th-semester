@@ -1,0 +1,21 @@
+			Assignment #6
+Q.5  Create a vb application that display the month,day 
+     and week day along with appropriate welcome message 
+     according to the time on form load. 
+
+Private Sub Form_Load()
+If Hour(Time$) < 12 Then
+    t = MsgBox("Good Morning", vbOKOnly, "Welcome")
+ElseIf Hour(Time$) < 6 Then
+    t = MsgBox("Good Afternoon", vbOKOnly, "Welcome")
+Else
+    t = MsgBox("Good Evening", vbOKOnly, "Welcome")
+End If
+Label4.Caption = Day(Date)
+Label5.Caption = Month(Date)
+Label6.Caption = Weekday(Date)
+End Sub
+
+Private Sub Label4_Click()
+
+End Sub

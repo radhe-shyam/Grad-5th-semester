@@ -1,0 +1,30 @@
+			Assignment #5
+Q2. Write a vb program to display a color change using scrollbars and picturr box.
+
+Sub color()
+Picture1.BackColor = RGB(VScroll1.Value, VScroll2.Value, VScroll3.Value)
+End Sub
+
+Private Sub VScroll1_Change()
+Call color
+End Sub
+
+Private Sub VScroll1_Scroll()
+Call color
+End Sub
+
+Private Sub VScroll2_Change()
+Call color
+End Sub
+
+Private Sub VScroll2_Scroll()
+Call color
+End Sub
+
+Private Sub VScroll3_Change()
+Call color
+End Sub
+
+Private Sub VScroll3_Scroll()
+Call color
+End Sub

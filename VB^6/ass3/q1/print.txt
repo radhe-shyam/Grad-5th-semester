@@ -1,0 +1,8 @@
+				Assignment #3
+Q1.	Create a form to trace the mouse coordinates on mouse move.
+
+Private Sub Form_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Label1.Left = X
+Label1.Top = Y
+Label1.Caption = "X = " & X & " Y = " & Y
+End Sub

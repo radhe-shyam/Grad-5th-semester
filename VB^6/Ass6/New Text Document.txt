@@ -1,0 +1,9 @@
+ 
+ 
+Q.No.  Questions  
+1  Create an alarm clock using timer control.  
+2  Create s vb application to demonstrate traffic signal system.  
+3  Create a stop watch using timer control.It should have buttons for start ,stop and reset.  
+4  Create a vb application having frame and picturebox.add buttons to move the picture box in up,bottom,left and right direction.make sure that the picture box does not cross the frame boundary.  
+5  Create a vb application that display the month,day and week day along with appropriate welcome message according to the time on form load. 
+ 

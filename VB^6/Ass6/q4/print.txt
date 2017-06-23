@@ -1,0 +1,34 @@
+		Assignment #6
+Q.4  Create a vb application having frame and picturebox.
+     add buttons to move the picture box in up,bottom,left 
+     and right direction.make sure that the picture box does 
+     not cross the frame boundary.  
+
+Private Sub Command1_Click()
+If Picture1.Top > 125 Then
+    Picture1.Top = Picture1.Top - 30
+End If
+
+End Sub
+
+Private Sub Command2_Click()
+If Picture1.Top < 2995 Then
+    Picture1.Top = Picture1.Top + 30
+End If
+End Sub
+
+Private Sub Command3_Click()
+If Picture1.Left < 5275 Then
+    Picture1.Left = Picture1.Left + 30
+End If
+End Sub
+
+Private Sub Command4_Click()
+If Picture1.Left > 5 Then
+    Picture1.Left = Picture1.Left - 30
+End If
+End Sub
+
+Private Sub Form_Load()
+
+End Sub

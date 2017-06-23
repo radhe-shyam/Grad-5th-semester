@@ -1,0 +1,31 @@
+		Assignment 6
+Q1.1  Create an alarm clock using timer control.  
+
+Private Sub Command1_Click()
+If Command1.Caption = "Alarm On" Then
+    Command1.Caption = "Alarm Off"
+    Text1.Visible = True
+    Text2.Visible = True
+    Label3.Visible = True
+Else
+    Command1.Caption = "Alarm On"
+    Text1.Visible = False
+    Text2.Visible = False
+    Label3.Visible = False
+End If
+End Sub
+Private Sub Form_Load()
+End Sub
+Private Sub Timer1_Timer()
+Label2.Caption = Time$
+If Command1.Caption = "Alarm Off" Then
+If Hour(Time$) = Text1.Text And Minute(Time$) = Text2.Text Then
+    Text1.BackColor = vbRed
+    Text2.BackColor = vbRed
+    Beep
+Else
+    Text1.BackColor = vbWhite
+    Text2.BackColor = vbWhite
+End If
+End If
+End Sub

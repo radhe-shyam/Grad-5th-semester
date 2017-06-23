@@ -1,0 +1,15 @@
+			Assignment #4
+Q4. create an application having progress bar to show the functionality of progress bar.
+
+Private Sub Form_Load()
+Timer1.Enabled = True
+End Sub
+
+Private Sub Timer1_Timer()
+If ProgressBar1.Value < 100 Then
+    ProgressBar1.Value = ProgressBar1.Value + 1
+    Label1.Caption = ProgressBar1.Value & "% Completed"
+Else
+    Unload Form1
+End If
+End Sub

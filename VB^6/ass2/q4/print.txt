@@ -1,0 +1,45 @@
+			Assignment #2
+Q4.	Create a form with three radio button as Fibonacci series, 
+	factorial and LCM the function should be implemented 
+	according to the selected radio button
+
+
+Private Sub Command2_Click()
+If Option1.Value = True Then
+    a = InputBox("Enter the Number")
+    fact = 1
+    For i = 1 To a
+        fact = fact * i
+    Next i
+    Text1.Text = fact
+Else
+    If Option2.Value = True Then
+        b = InputBox("Enter the Number")
+        j = 0
+        k = 1
+        Text1.Text = j & vbCrLf
+        Text1.Text = Text1.Text & k & vbCrLf
+        For i = 0 To b - 3
+            fib = j + k
+            Text1.Text = Text1.Text & fib & vbCrLf
+            j = k
+            k = fib
+        Next i
+    Else
+        m = InputBox("Enter the number")
+        n = InputBox("Enter the number")
+        pro = Val(m * n)
+        Do
+        If m < n Then
+        temp = m
+        m = n
+        n = temp
+        End If
+        m = m Mod n
+        Loop While m > 0
+        lcm = pro / n
+        Text1.Text = lcm
+    End If
+End If
+End Sub
+

@@ -1,0 +1,75 @@
+			Assignment #5
+Q4. Write a vb application to create a simple notepad application.
+
+Private Sub bold_mnu_Click()
+rtf.SelBold = True
+End Sub
+
+Private Sub delete_mnu_Click()
+rtf.SelText = ""
+End Sub
+
+Private Sub find_Click()
+a = InputBox("Find What", "find")
+rtf.SelStart = 0
+rtf.find (a)
+End Sub
+
+Private Sub font_mnu_Click()
+CommonDialog1.ShowColor
+rtf.SelColor = CommonDialog1.Color
+End Sub
+
+Private Sub italic_mnu_Click()
+rtf.SelItalic = True
+End Sub
+
+Private Sub new_mnu_Click()
+rtf.Text = ""
+End Sub
+
+Private Sub open_mnu_Click()
+CommonDialog1.Filter = "All files|*.*|Text files(*.txt)|*.txt"
+CommonDialog1.ShowOpen
+rtf.LoadFile (CommonDialog1.FileName)
+End Sub
+
+Private Sub paste_mnu_Click()
+rtf.SelText = Clipboard.GetText
+End Sub
+
+Private Sub print_mnu_Click()
+CommonDialog1.ShowPrinter
+End Sub
+
+Private Sub replace_Click()
+a = InputBox("Find What", find)
+rtf.SelStart = 0
+rtf.find (a)
+b = InputBox("Replace with", "replace")
+rtf.SelText = b
+End Sub
+
+Private Sub replaceall_Click()
+a = InputBox("Find What", find)
+rtf.SelStart = 0
+rtf.find (a)
+b = InputBox("Replace with")
+rtf.Text = replace(rtf.Text, a, b)
+
+End Sub
+
+Private Sub sall_mnu_Click()
+rtf.SelStart = 0
+rtf.SelText
+End Sub
+
+Private Sub save_mnu_Click()
+CommonDialog1.Filter = "All files|*.*|Text files(*.txt)|*.txt"
+CommonDialog1.ShowSave
+rtf.SaveFile (CommonDialog1.FileName)
+End Sub
+
+Private Sub uline_mnu_Click()
+rtf.SelUnderline = True
+End Sub

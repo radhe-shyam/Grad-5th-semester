@@ -1,0 +1,33 @@
+			Assignment #1
+Q1.	create a form with two text boxes and two buttons.the 
+	first button can enable or disable the textbox and the 
+	second shows or hides the textbox.
+
+
+Private Sub Command1_Click()
+If (Text1.Enabled = True) Then
+Text1.Enabled = False
+Text2.Enabled = False
+Command1.Caption = "Enable"
+Text1.Text = "Disable"
+Text2.Text = "Disable"
+Else
+Text1.Enabled = True
+Text2.Enabled = True
+Command1.Caption = "Disable"
+Text1.Text = "Enable"
+Text2.Text = "Enable"
+End If
+End Sub
+
+Private Sub Command2_Click()
+If (Text1.Visible = True) Then
+Text1.Visible = False
+Text2.Visible = False
+Command2.Caption = "Show"
+Else
+Text1.Visible = True
+Text2.Visible = True
+Command2.Caption = "Hide"
+End If
+End Sub

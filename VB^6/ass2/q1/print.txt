@@ -1,0 +1,8 @@
+			Assignment #2
+Q1.	Create a form that displays different styles of message box 
+	according to the value entered by the user on button click.
+
+
+Private Sub Command1_Click()
+t = MsgBox("Hello", Text1.Text, "Msg_Box")
+End Sub
